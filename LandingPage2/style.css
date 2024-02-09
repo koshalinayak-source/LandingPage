@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.798);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    position: relative;
+    height: 556px;
+    z-index: 1;
+    
+}
+.scroll-div::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div1::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+.scroll-div{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+.scroll-div h1{
+    padding: 25px;
+    font-size: 93px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   animation-name: scroll;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+
+.scroll-div1{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+   z-index: 2;
+
+}
+.scroll-div1 h1{
+    padding: 25px;
+    font-size: 93px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    animation-name: scroll;
+   animation-duration: 2s;
+   animation-direction: reverse;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+    
+}
+
+.scroll-div2{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+.scroll-div2 h1{
+    padding: 25px;
+    font-size: 93px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation-name: scroll;
+   animation-duration: 2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+.text{
+    position: absolute;
+    z-index: 99;
+    font-weight: 900;
+    font-size: 30px;
+    width: 80%;
+    color: rgba(0, 0, 0, 0.575);
+    font-family:monument;
+    text-align: center;
+    top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+.text1{
+    position: absolute;
+    top: 85%;
+    width: 29%;
+    left: 34px;
+
+}
+@keyframes scroll {
+    0%{
+        transform: translate(calc(-100% - 35%));
+
+    }
+    100%{
+        transform: translate(0);
+
+    }
+}
+
+@media (max-width:919px) {
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .text1{
+        padding-top: 100px;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+}
